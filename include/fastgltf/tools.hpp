@@ -609,7 +609,7 @@ public:
 	}
 };
 
-#if FASTGLTF_HAS_CONCEPTS
+#if FASTGLTF_HAS_CONCEPTS && !defined(__APPLE__)
 static_assert(std::ranges::input_range<IterableAccessor<math::fvec4>>, "IterableAccessor needs to satisfy input_range");
 #endif
 
